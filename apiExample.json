@@ -1,0 +1,26 @@
+[
+  {
+    "id": "001",
+    "name": "Johnson",
+    "phone-number": "0123456789",
+    "email": "example@gmail.com",
+    "address": "Viet Nam",
+    "status": "active"
+  },
+  {
+    "id": "002",
+    "name": "Dương",
+    "phone-number": "0123456759",
+    "email": "example2@gmail.com",
+    "address": "America",
+    "status": "unactive"
+  },
+  {
+    "id": "003",
+    "name": "Khang",
+    "phone-number": "0125456789",
+    "email": "example3@gmail.com",
+    "address": "Campuchia",
+    "status": "active"
+  }
+]
