@@ -29,7 +29,7 @@
     "phone-number": "0125456589",
     "email": "example4@gmail.com",
     "address": "Lao",
-    "status": "unactive"
+    "status": "active"
   },
   {
     "id": "005",
@@ -38,5 +38,13 @@
     "email": "example5@gmail.com",
     "address": "Long An, Việt Nam",
     "status": "unactive"
+  },
+  {
+    "id": "006",
+    "name": "Khang Hy",
+    "phone-number": "0321654987",
+    "email": "hy.duong@gmail.com",
+    "address": "Hà Nội, Việt Nam",
+    "status": "active"
   }
 ]
