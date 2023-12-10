@@ -56,9 +56,43 @@ ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 
 // ===typed js===
 const typed = new Typed(".multiple-text", {
-  strings: ["Frontend Developer", "Flutter Developer", "Graphic Designer"],
+  strings: [
+    "Frontend Developer", 
+    "Flutter Developer", 
+    // "Graphic Designer",
+  ],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,
   loop: true,
 });
+
+// ----Send Form Mail----
+function submitForm() {
+  // Lấy giá trị từ các trường nhập liệu
+  var name = document.getElementById("fullName").value;
+  var email = document.getElementById("email").value;
+  var mobileNumber = document.getElementById("mobileNumber").value;
+  var emailSubject = document.getElementById("emailSubject").value;
+  var yourMessage = document.getElementById("yourMessage").value;
+
+  // Tạo một đối tượng XMLHttpRequest để gửi dữ liệu đến máy chủ
+  var xhr = new XMLHttpRequest();
+  var url = "your_email_script.php"; // Đặt đường dẫn tới script xử lý email ở đây
+  xhr.open("POST", url, true);
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+  // Xử lý sự kiện khi truy vấn hoàn tất
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        // Xử lý phản hồi từ máy chủ (nếu cần)
+        console.log(xhr.responseText);
+    }
+  };
+
+  // Chuẩn bị dữ liệu để gửi lên máy chủ
+  var data = "name=" + name + "&email=" + email + "&mobileNumber=" + mobileNumber+ "&emailSubject=" + emailSubject + "&yourMessage=" + yourMessage;
+
+  // Gửi truy vấn đến máy chủ
+  xhr.send(data);
+}

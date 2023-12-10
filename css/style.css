@@ -106,8 +106,13 @@ span {
 /* Home */
 .home {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  /* justify-content: center; */
   align-items: center;
+}
+
+.home-content {
+  margin-right: 16px;
 }
 
 .home-img img {
@@ -180,7 +185,8 @@ span {
 /* About */
 .about {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  /* justify-content: center; */
   align-items: center;
   gap: 2rem;
   background: var(--second-bg-color);
@@ -223,7 +229,7 @@ span {
 .services-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: top;
   flex-wrap: wrap;
   gap: 2rem;
 }
