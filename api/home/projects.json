@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Dự án trang profile cá nhân Dương Khang Hy",
+        "client": "Dương Khang Hy",
+        "title": "My Portfolio",
+        "subTitleVi": "Giới thiệu bản thân, các dự án của tôi đã thực hiện hoặc hiện đang tham gia và một số dịch vụ của tôi có thể cung cấp.\nCông nghệ: HTML/CSS/JS.",
+        "subTitleEn": "Introduce yourself, my projects have worked on or are currently involved in, and some my services can offer.\nTechnology: HTML/CSS/JS.",
+        "describe": "Dùng để chứa các thông tin cá nhân cần thiết cho Nhà tuyển dụng và Khách hàng. Ví dụ như Thông tin liên lạc, Hình ảnh cá nhân, Giới thiệu bản thân và Thông tin về các dự án đã từng làm và đang phát triển",
+        "urlIllustration": "https://ericduong107.github.io/assets/img/portfolio/portfolio-1.png",
+        "urlProduct": {
+            "ios": "",
+            "android": "",
+            "website": "http://ericduong107.github.io",
+            "macos": "",
+            "window": "",
+            "linux": "",
+            "windowPhone": "",
+            "websiteDashboard": ""
+        }
+    },
+    {
+        "id": 2,
+        "name": "Dự án website Dashboard PharmaCom",
+        "client": "PharmaCom",
+        "title": "DB PharmaCom",
+        "subTitleVi": "Tổng hợp thông tin về lượt xem, số lần nhấp, khóa học, v.v. và sử dụng biểu đồ để dễ hình dung. Công nghệ: Flutter Web. \nAcc: hy.duong@openmed.com.vn \nPass: 0963500454",
+        "subTitleEn": "Compile information on views, clicks, courses, etc., and use charts for easy visualization. Technology: Flutter Web. \nAcc: hy.duong@openmed.com.vn \nPass: 0963500454",
+        "describe": "Giao diện trực quan điều khiển để xem các thông số quan trọng của các banner, video, game, khách hàng. Và từ những thông số nhạt nhẽo sẽ được tự động biểu đồ hoá xem xét, quản lý cũng như phán đoán trong tương lai. Website này được khi bản thân tôi (Hy) còn làm trong một công ty (Công ty TNHH Công nghệ Y tế OpenMed là một công ty con của Công ty Cổ phần Truyền Thông Medihub)",
+        "urlIllustration": "https://ericduong107.github.io/assets/img/portfolio/portfolio-2.png",
+        "urlProduct": {
+            "ios": "",
+            "android": "",
+            "website": "https://openmed2023.github.io/dashboard_pharmacom/#/",
+            "macos": "",
+            "window": "",
+            "linux": "",
+            "windowPhone": "",
+            "websiteDashboard": ""
+        }
+    }
+]
