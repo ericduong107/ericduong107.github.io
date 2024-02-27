@@ -1,4 +1,4 @@
-const endDate = new Date("Feb 10, 2024 00:00:00").getTime();
+const endDate = new Date("Jan 29, 2025 00:00:00").getTime();
 
 const dayEl = document.getElementById("days");
 const hourEl = document.getElementById("hours");
