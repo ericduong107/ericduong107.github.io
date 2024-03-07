@@ -1,0 +1,127 @@
+@import url("reset.css");
+@import url("variable.css");
+
+#main {}
+
+#header {
+    height: var(--header-height);
+    background-color: #000;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+#header .search-btn {
+    color: #fff;
+    padding: 0 24px;
+    line-height: var(--header-height);
+    font-size: 14px;
+    float: right;
+}
+
+#header .search-btn:hover {
+    background-color: #ff4336;
+    cursor: pointer;
+}
+
+#header .search-icon {}
+
+#nav {
+    display: inline-block;
+}
+
+#nav>li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav>li>a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: var(--header-height);
+    padding: 0 24px;
+    display: block;
+}
+
+#nav>li:hover>a,
+#nav .subnav li:hover a {
+    background-color: #ccc;
+    color: #000;
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    background-color: #fff;
+    list-style-type: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav a {
+    color: #000;
+    display: block;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+#slider {
+    position: relative;
+    margin-top: var(--header-height);
+    padding-top: 50%;
+    /* height: calc(100vw / 2);  */
+    background: url("/assets/2/img/slider/slider-1.jpg") top center / cover no-repeat;
+}
+
+#slider .text-content {
+    position: absolute;
+    color: #fff;
+    bottom: 47px;
+    text-align: center;
+    /* Cách 1 */
+    /* left: 50%;
+    transform: translateX(-50%); */
+
+    /* Cách 2 */
+    width: 100%;
+
+    /* Cách 3 */
+    /* left: 0;
+    right: 0; */
+}
+
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-decription {
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+#content {
+    background-color: green;
+    /* height: 100vh; */
+}
+
+#footer {}

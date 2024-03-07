@@ -1,0 +1,40 @@
+Plan thực hành 1:
+https://www.w3schools.com/w3css/tryw3css_templates_band.htm#
+
+--------------------------------
+
+1. Phân tích: -> OK
+    1. Header 
+    2. Slider
+    3. Content
+        1. About
+        2. Tour
+        3. Contact
+        4. Image
+    4. Footer
+
+--------------------------------
+
+2. Dựng base (Xây móng)
+- Tạo source
+- Tạo cây thư mục
+- Tạo sườn HTML và call style.css, main.js 
+- Reset css
+
+--------------------------------
+
+3. Xây dựng từng phần theo phân thích
+    Nguyên tắc 1:
+        1. Vị trí
+        2. Kích thước
+        3. Màu sắc
+        4. Kiểu dáng (kiểu chữ, hình vuông, hình tròn ...)
+
+    Nguyên tắc 2:
+        1. Từ ngoài vào trong
+        2. Từ trên xuống dưới
+        3. Tổng quan đến chi tiết
+
+--------------------------------
+
+4. Hoàn thiện
