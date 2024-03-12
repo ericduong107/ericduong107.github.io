@@ -3,6 +3,14 @@ Add this to your HTML <head>:
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+  <link rel="icon" href="/assets/common/imgs/logo/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/common/imgs/logo/apple-touch-icon.png">
+  
+  <link rel="icon-192-maskable" href="/assets/common/imgs/logo/icon-192-maskable.png">
+  <link rel="icon-192" href="/assets/common/imgs/logo/icon-192.png">
+  <link rel="icon-512-maskable" href="/assets/common/imgs/logo/icon-512-maskable.png">
+  <link rel="icon-512" href="/assets/common/imgs/logo/icon-512.png">
+
 Add this to your app's manifest.json:
 
     ...

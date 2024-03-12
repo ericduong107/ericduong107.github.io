@@ -57,8 +57,8 @@ ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 // ===typed js===
 const typed = new Typed(".multiple-text", {
   strings: [
-    "Frontend Developer", 
-    "Flutter Developer", 
+    "Frontend Developer",
+    "Flutter Developer",
     // "Graphic Designer",
   ],
   typeSpeed: 100,
@@ -78,20 +78,30 @@ function submitForm() {
 
   // Tạo một đối tượng XMLHttpRequest để gửi dữ liệu đến máy chủ
   var xhr = new XMLHttpRequest();
-  var url = "your_email_script.php"; // Đặt đường dẫn tới script xử lý email ở đây
+  var url = "http://localhost/ericduong107_github/first.php"; // Đặt đường dẫn tới script xử lý email ở đây
   xhr.open("POST", url, true);
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
   // Xử lý sự kiện khi truy vấn hoàn tất
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
-        // Xử lý phản hồi từ máy chủ (nếu cần)
-        console.log(xhr.responseText);
+      // Xử lý phản hồi từ máy chủ (nếu cần)
+      console.log(xhr.responseText);
     }
   };
 
   // Chuẩn bị dữ liệu để gửi lên máy chủ
-  var data = "name=" + name + "&email=" + email + "&mobileNumber=" + mobileNumber+ "&emailSubject=" + emailSubject + "&yourMessage=" + yourMessage;
+  var data =
+    "name=" +
+    name +
+    "&email=" +
+    email +
+    "&mobileNumber=" +
+    mobileNumber +
+    "&emailSubject=" +
+    emailSubject +
+    "&yourMessage=" +
+    yourMessage;
 
   // Gửi truy vấn đến máy chủ
   xhr.send(data);
@@ -108,15 +118,19 @@ function includeHTML() {
     if (file) {
       /* Make an HTTP request using the attribute value as the file name: */
       xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
+      xhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          if (this.status == 200) {
+            elmnt.innerHTML = this.responseText;
+          }
+          if (this.status == 404) {
+            elmnt.innerHTML = "Page not found.";
+          }
           /* Remove the attribute, and call this function once more: */
           elmnt.removeAttribute("w3-include-html");
           includeHTML();
         }
-      } 
+      };
       xhttp.open("GET", file, true);
       xhttp.send();
       /* Exit the function: */
