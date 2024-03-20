@@ -48,6 +48,10 @@ span {
   box-shadow: none;
 }
 
+.pb {
+  padding-bottom: 80px;
+}
+
 .function-development {
   text-align: center;
   font-size: 3rem;
