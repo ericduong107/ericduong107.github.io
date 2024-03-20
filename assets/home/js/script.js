@@ -67,6 +67,21 @@ const typed = new Typed(".multiple-text", {
   loop: true,
 });
 
+// ===home and about avatar===
+const homeAbout = document.getElementById("avatar-home");
+const aboutAvatar = document.getElementById("avatar-about");
+
+if (window.screen.width > 768) {
+  homeAbout.style.clipPath =
+    "polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%) !important";
+  aboutAvatar.src =
+    "/assets/common/imgs/avatars/personal/about_section/img-1_1-transparent.png";
+} else {
+  homeAbout.style.clipPath = none;
+  aboutAvatar.src =
+    "/assets/common/imgs/avatars/personal/about_section/img-1_1.png";
+}
+
 // ----Send Form Mail----
 function submitForm() {
   // Lấy giá trị từ các trường nhập liệu

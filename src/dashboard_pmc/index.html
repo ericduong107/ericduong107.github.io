@@ -4,25 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard PharmaCom</title>
+    <script src="/assets/common/js/link_func.js"></script>
   </head>
   <body>
     <script>
       const urlHome = "https://openmed2023.github.io/dashboard_pharmacom/#/";
 
       window.onload = function () {
-        // Cach 0:
-        var headTag = document.getElementsByTagName("HEAD")[0];
-        var metaRefreshTag = document.createElement("META");
-        metaRefreshTag.setAttribute("http-equiv", "refresh");
-        metaRefreshTag.setAttribute("content", `0;url=${urlHome}`);
-        headTag.appendChild(metaRefreshTag);
-
-        // -----------------------------------------------
-        // Cach 1: Similar behavior as clicking on a link
-        // window.location.href = urlHome;
-        // -----------------------------------------------
-        // Cach 2: Similar behavior as an HTTP redirect
-        // window.location.replace("http://stackoverflow.com");
+        forwardLink(urlHome);
       };
     </script>
   </body>
