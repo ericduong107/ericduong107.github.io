@@ -2,6 +2,33 @@
   margin-bottom: 3rem;
 }
 
+.contact .contact-container {
+  text-align: center;
+}
+
+.contact .contact-box {
+  text-align: left;
+  margin: auto;
+  width: 50%;
+}
+
+.contact .contact-item {
+  font-size: 2rem;
+  line-height: 2;
+}
+
+.contact-item i[class*="bx"] {
+  width: 50px;
+  height: 50px;
+  font-size: 3rem;
+  color: var(--main-color);
+  display: inline-block;
+}
+
+.contact-item .contact-content {
+  color: var(--text-color);
+}
+
 .contact form {
   max-width: 70rem;
   margin: 1rem auto;
