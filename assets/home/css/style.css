@@ -1,6 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-@import url("/assets/common/css/main.css");
-@import url("./src/app.css");
+/* Variable */
+:root {
+  --bg-color: #f7f7f7;
+  --second-bg-color: #ebebeb;
+  --text-color: #000;
+  --main-color: #d4d800;
+  /* --main-color: #0ef; */
+}
+
+.dark-theme {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #fbff00;
+  /* --main-color: #0ef; */
+}
 
 /* Reset */
 * {
