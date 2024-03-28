@@ -83,11 +83,11 @@ function changeIconTheme() {
     (undefined === localStorage.isDark &&
       window.matchMedia("(prefers-color-scheme: dark)").matches)
   ) {
-    toggleThemeBtn.classList.toggle(iconDarkTheme);
-    toggleThemeBtn.classList.add(iconLightTheme);
-  } else {
     toggleThemeBtn.classList.toggle(iconLightTheme);
     toggleThemeBtn.classList.add(iconDarkTheme);
+  } else {
+    toggleThemeBtn.classList.toggle(iconDarkTheme);
+    toggleThemeBtn.classList.add(iconLightTheme);
   }
 }
 
