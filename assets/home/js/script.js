@@ -198,3 +198,30 @@ function includeHTML() {
     }
   }
 }
+
+// ===get img screenshot api===
+// https://shot.screenshotapi.net/screenshot? token=G8K7ZX1-T6AMRSJ-NFTCR7G-0PP43B0&url=https%3A%2F%2Fericduong107.github.io%2F&fresh=true&output=image&file_type=png&wait_for_event=load
+
+// const url = "https://ericduong107.github.io";
+// const token = `G8K7ZX1-T6AMRSJ-NFTCR7G-0PP43B0`;
+// const screenshotUrl = `https://shot.screenshotapi.net/screenshot? token=${token}&url=${encodeURIComponent(
+//   url
+// )}&fresh=true&output=image&file_type=png&wait_for_event=load`;
+
+// const newImage = document.createElement("img");
+
+// newImage.src = screenshotUrl;
+
+// document.getElementById("portfolio").appendChild(newImage);
+
+/**
+ * let project = {
+ *  url: url,
+ *  token: token,
+ * };
+ * @param { * } project
+ */
+// function renderProjectsList(project) {
+//   const urlEncoded = encodeURIComponent(project.url);
+//   const screenshotUrl = `https://shot.screenshotapi.net/screenshot? token=${project.token}&url=${urlEncoded}&fresh=true&output=image&file_type=png&wait_for_event=load`;
+// }
