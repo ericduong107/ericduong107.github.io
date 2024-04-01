@@ -1,0 +1,107 @@
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #fbff00;
+  /* --main-color: #0ef; */
+  --linear-bg-color: linear-gradient(
+    to right,
+    var(--main-color),
+    var(--second-bg-color)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--second-bg-color);
+  opacity: 0.1;
+}
+
+body {
+  background: var(--linear-bg-color);
+  font-family: sans-serif;
+  color: var(--text-color);
+}
+
+.container {
+  width: 400px;
+  margin: 100px auto;
+  background: var(--bg-color);
+  /* min-height: 500px; */
+  border-radius: 6px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+form {
+  border-bottom: 1px solid #aaa;
+  padding: 10px 20px;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+
+form input {
+  font-size: 24px;
+  border: none;
+  width: 100%;
+  margin-right: 16px;
+  outline: none;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+form button {
+  background: var(--main-color);
+  padding: 5px 15px;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 0 1rem var(--main-color);
+  color: var(--second-bg-color);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+form button:hover {
+  box-shadow: none;
+}
+
+.todos {
+  list-style-type: none;
+}
+
+.todos li {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border-bottom: 1px solid #4a4a4a;
+  /* border-bottom: 1px solid #e5e5e5; LightTheme */
+  padding: 16px;
+  font-size: 22px;
+  align-items: center;
+}
+
+.todos li span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 16px;
+}
+
+li.completed {
+  color: #aaa;
+}
+
+li.completed span {
+  text-decoration: line-through;
+}
+
+.todos .trash-icon {
+  /* cursor: pointer; */
+}
