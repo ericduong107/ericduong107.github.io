@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive demo</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      .pc,
+      .tablet,
+      .mobile {
+        font-size: 68px;
+        margin: 50px auto;
+        display: none;
+        color: blue;
+      }
+
+      /* PC: >= 1024px */
+      @media (min-width: 1024px) {
+        .pc {
+          display: block;
+          color: red;
+        }
+      }
+
+      /* Tablet: >= 740px & < 1024px */
+      @media (min-width: 740px) and (max-width: 1023px) {
+        .tablet {
+          display: block;
+          color: rgb(138, 138, 0);
+        }
+      }
+
+      /* Mobile: < 740px */
+      @media (max-width: 739px) {
+        .mobile {
+          display: block;
+          color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="pc">PC</h2>
+      <h2 class="tablet">Tablet</h2>
+      <h2 class="mobile">Mobile</h2>
+    </div>
+  </body>
+</html>
