@@ -1,6 +1,26 @@
 @import url("reset.css");
 @import url("variable.css");
 
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Helvetica, Arial, sans-serif;
+  /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+}
+
+/* Variable */
+:root {
+  --header-height: 46px;
+  --body-bg-light-color: #fff;
+  --body-bg-dark-color: #000;
+}
+
 /* Common */
 .clear {
   clear: both;
@@ -85,12 +105,24 @@
   top: 0;
 }
 
+#header .mobile-menu-btn,
 #header .search-btn {
-  color: #fff;
   padding: 0 24px;
+  float: right;
+}
+
+#header .mobile-menu-btn {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#header .menu-icon,
+#header .search-icon {
   line-height: var(--header-height);
   font-size: 14px;
-  float: right;
+  color: #fff;
 }
 
 #header .search-btn:hover {
@@ -98,7 +130,12 @@
   cursor: pointer;
 }
 
-#header .search-icon {
+#header .mobile-menu-btn:hover {
+  background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+  color: #000;
 }
 
 #nav {
