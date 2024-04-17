@@ -1,0 +1,114 @@
+/* PC: >= 1024px */
+/* @media (min-width: 1024px) { */
+@media (min-width: 64em) {
+}
+
+/* Tablet & mobile */
+/* @media (max-width: 1023px) { */
+@media (max-width: 63.9375em) {
+  .btn {
+    padding: 16px;
+  }
+
+  #nav .subnav a {
+    color: #fff;
+    padding: 5px 12px;
+  }
+
+  .contact-form .form-control {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .contact-info {
+    line-height: 2;
+  }
+
+  .contact-submit-btn {
+    font-size: 16px;
+  }
+
+  #footer .socials-list {
+    font-size: 48px;
+  }
+
+  #footer .socials-list a {
+    margin: 4px 8px;
+  }
+
+  #footer .copyright a {
+    padding: 12px 0;
+    display: inline-block;
+  }
+}
+
+/* Tablet: >= 740px & < 1024px */
+/* @media (min-width: 740px) and (max-width: 1023px) { */
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+}
+
+/* Mobile: < 740px */
+/* @media (max-width: 739px) { */
+@media (max-width: 46.1875em) {
+  /* Common */
+  .mt-sm-8 {
+    margin-top: 8px;
+  }
+
+  .width-sm-full,
+  .col-sm-full {
+    width: 100% !important;
+  }
+
+  /* === Begin: Header === */
+  #header {
+    overflow: hidden;
+  }
+
+  #header .mobile-menu-btn {
+    display: block;
+  }
+
+  #header .search-btn {
+    display: none;
+  }
+
+  /* Nav */
+  #nav {
+    display: block;
+  }
+
+  #nav li a {
+    padding: 1px 24px;
+  }
+
+  #nav > li {
+    display: block;
+  }
+
+  #nav > li:first-child {
+    display: inline-block;
+  }
+
+  /* Subnav */
+  #nav .subnav {
+    position: initial;
+    background-color: #333;
+  }
+
+  #nav .subnav a {
+    color: #fff;
+    padding: 5px 41px;
+  }
+  /* === End: Header === */
+
+  /* Content */
+  #content .member-img {
+    width: 60%;
+  }
+
+  /* Contact */
+  .contact-form {
+    margin-top: 32px;
+  }
+}

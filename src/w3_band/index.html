@@ -14,12 +14,9 @@
     />
 
     <!-- css -->
-    <link rel="stylesheet" href="/assets/2/css/style.css" />
-    <link rel="stylesheet" href="/assets/2/css/responsive.css" />
-    <link
-      rel="stylesheet"
-      href="/assets/2/fonts/themify-icons/themify-icons.css"
-    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./fonts/themify-icons/themify-icons.css" />
   </head>
 
   <body>
@@ -84,28 +81,28 @@
             ea commodo consequat.
           </p>
           <div class="row members-list">
-            <div class="col col-3 text-center">
+            <div class="col col-sm-full col-3 text-center">
               <p class="member-name">Name</p>
               <img
-                src="/assets/2/img/band/member_1.jpeg"
+                src="./img/band/member_1.jpeg"
                 alt="Name"
                 class="member-img"
               />
             </div>
 
-            <div class="col col-3 text-center">
+            <div class="col col-sm-full col-3 text-center">
               <p class="member-name">Name</p>
               <img
-                src="/assets/2/img/band/member_1.jpeg"
+                src="./img/band/member_1.jpeg"
                 alt="Name"
                 class="member-img"
               />
             </div>
 
-            <div class="col col-3 text-center">
+            <div class="col col-sm-full col-3 text-center">
               <p class="member-name">Name</p>
               <img
-                src="/assets/2/img/band/member_1.jpeg"
+                src="./img/band/member_1.jpeg"
                 alt="Name"
                 class="member-img"
               />
@@ -128,10 +125,10 @@
             </ul>
 
             <!-- Places -->
-            <div class="row places-list">
-              <div class="col col-3">
+            <div class="row">
+              <div class="col col-sm-full col-3 mt-32">
                 <img
-                  src="/assets/2/img/places/place-1.jpeg"
+                  src="./img/places/place-1.jpeg"
                   alt="New York"
                   class="place-img"
                 />
@@ -141,12 +138,14 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="btn js-buy-tickets">Buy Tickets</button>
+                  <button class="btn js-buy-tickets width-sm-full">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
-              <div class="col col-3">
+              <div class="col col-sm-full col-3 mt-32">
                 <img
-                  src="/assets/2/img/places/place-2.jpeg"
+                  src="./img/places/place-2.jpeg"
                   alt="New York"
                   class="place-img"
                 />
@@ -156,12 +155,14 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="btn js-buy-tickets">Buy Tickets</button>
+                  <button class="btn js-buy-tickets width-sm-full">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
-              <div class="col col-3">
+              <div class="col col-sm-full col-3 mt-32">
                 <img
-                  src="/assets/2/img/places/place-3.jpeg"
+                  src="./img/places/place-3.jpeg"
                   alt="New York"
                   class="place-img"
                 />
@@ -171,7 +172,9 @@
                   <p class="place-desc">
                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                   </p>
-                  <button class="btn js-buy-tickets">Buy Tickets</button>
+                  <button class="btn js-buy-tickets width-sm-full">
+                    Buy Tickets
+                  </button>
                 </div>
               </div>
             </div>
@@ -183,25 +186,32 @@
         <div id="contact" class="content-section">
           <h2 class="section-heading text-center">Contact</h2>
           <p class="section-sub-heading text-center">Fan? Drop a note!</p>
-          <div class="row contatc-content">
-            <div class="col col-2 contact-info">
+          <div class="row contact-content">
+            <div class="col col-2 col-sm-full contact-info">
               <p>
                 <i class="ti-location-pin"></i>
                 Chicago, US
               </p>
+              <!-- TODO: Code thêm JS để auto nhảy ra href từ innerHtml -->
               <p>
                 <i class="ti-mobile"></i>
-                Phone: +00 151515
+                Phone:
+                <a aria--type="phone" class="" href="tel:+00 151515"
+                  >+00 151515</a
+                >
               </p>
               <p>
                 <i class="ti-email"></i>
-                Email:mail@mail.com
+                Email:
+                <a aria--type="email" href="mailto:mail@mail.com"
+                  >mail@mail.com</a
+                >
               </p>
             </div>
-            <div class="col col-2 contact-form">
+            <div class="col col-2 col-sm-full contact-form">
               <form action="">
                 <div class="row">
-                  <div class="col col-2">
+                  <div class="col col-2 col-sm-full">
                     <input
                       type="text"
                       name=""
@@ -210,7 +220,7 @@
                       class="form-control"
                     />
                   </div>
-                  <div class="col col-2">
+                  <div class="col col-2 col-sm-full mt-sm-8">
                     <input
                       type="email"
                       name=""
@@ -234,7 +244,7 @@
                   </div>
                 </div>
                 <input
-                  class="btn float-right mt-16"
+                  class="contact-submit-btn btn float-right mt-16 width-sm-full"
                   required
                   type="submit"
                   value="SEND"
@@ -247,7 +257,7 @@
 
         <!-- Begin: Map Section -->
         <div class="map-section">
-          <img src="/assets/2/img/map.jpg" alt="Map" />
+          <img src="./img/map.jpg" alt="Map" />
         </div>
         <!-- End: Map Section -->
       </div>
@@ -317,6 +327,6 @@
     </div>
 
     <!-- javascript -->
-    <script src="/assets/2/js/main.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
