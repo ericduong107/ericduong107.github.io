@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.2/p5.min.js"
+    integrity="sha512-eu9vkh+EbAsW3fMmPTj/DP5W3UegIdu0Z/OABMocvoofx43MYBkcQ9hRIVxZndV1vcCYQwBg+U1PkWl04TD0Jg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <body>
+    <!-- <div class="gravity"></div> -->
+
+    <!-- <script src="main.js"></script> -->
+    <script>
+      function setup() {
+        createCanvas(windowWidth, 300);
+      }
+
+      var circle = {
+        x: 200,
+        y: 50,
+        ys: 2,
+        d: 50,
+        xs: 2,
+        noname() {
+          this.x = x;
+          this.y = y;
+          this.ys = ys;
+          this.d = d;
+          this.xs = xs;
+        },
+        show() {
+          ellipse(this.x, this.y, this.d);
+          this.y += this.ys;
+          this.x += this.xs;
+          if (this.x - 30 <= 0 || this.x + 30 >= windowWidth) {
+            this.xs *= 1;
+          }
+          if (this.y + 20 >= 300) {
+            this.y = 276;
+            if (this.xs > 0) {
+              this.xs -= 0.01;
+            } else {
+              this.xs += 0.01;
+            }
+          } else {
+            if (this.y - 30 <= 0 || this.y + 30 >= 300) {
+              this.ys *= -1;
+            }
+          }
+        },
+      };
+
+      function draw() {
+        clear();
+        background(0);
+        circle.show();
+        circle.ys += 0.7;
+      }
+    </script>
+  </body>
+</html>
