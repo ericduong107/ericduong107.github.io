@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
 /* Variable */
 :root {
   --bg-color: #f7f7f7;
@@ -27,7 +28,7 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
 }
 
 html {
@@ -50,16 +51,49 @@ span {
 }
 
 /* Common */
-.bg-second {
-  background: var(--second-bg-color);
+.khp__bg-second {
+  background: var(--second-bg-color) !important;
 }
 
-.heading {
+.khp__heading {
   text-align: center;
   font-size: 4.5rem;
 }
 
-.btn {
+.khp__row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.khp__row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.khp__col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.khp__col-2 {
+  width: 50%;
+}
+
+.khp__col-3 {
+  width: 33.33333%;
+}
+
+.khp__col-full {
+  width: 100%;
+}
+
+.khp__float-right {
+  float: right;
+}
+
+.khp__btn {
   display: inline-block;
   padding: 1rem 2.8rem;
   background: var(--main-color);
@@ -72,11 +106,11 @@ span {
   transition: 0.5s ease;
 }
 
-.btn:hover {
+.khp__btn:hover {
   box-shadow: none;
 }
 
-.pb {
+.khp__pb {
   padding-bottom: 80px;
 }
 

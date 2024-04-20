@@ -13,8 +13,12 @@
 
   <meta name="description" content="Đây là trang cá nhân của tôi. Gồm có phần giới thiệu bản thân, hình ảnh, những kỹ năng, kinh nghiệm, sản phẩm, dự án.">
 
-  <!-- Box icons -->
+  <!-- Library CSS -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Font CSS -->
+  <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap' rel='stylesheet' type='text/css'>
 
   <!-- Custom css -->
   <link rel="stylesheet" href="/assets/home/css/style.css">
@@ -23,6 +27,12 @@
   <link rel="icon" href="/assets/common/imgs/logo/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/assets/common/imgs/logo/apple-touch-icon.png">
   <!-- <script type="module" src="./assets/common/js/main.js"></script> -->
+  
+  <style> 
+    * {
+      font-family: "Poppins", sans-serif !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -38,6 +48,7 @@
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#portfolio">Portfolio</a>
+      <a href="#tool">Tool</a>
       <a href="#contact">Contact</a>
 
       <i class="bx bxs-moon" id="toggle-theme"></i>
@@ -60,8 +71,8 @@
         <a target="_blank" href="https://github.com/ericduong107"><i class='bx bxl-github'></i></a>
         <!-- <a target="_blank" href="#"><i class='bx bxl-linkedin'></i></a> -->
       </div>
-      <a href="#contact" class="btn">Contact Me</a>
-      <a href="#about" class="btn" style="margin-left: 16px;">Read More</a>
+      <a href="#contact" class="khp__btn">Contact Me</a>
+      <a href="#about" class="khp__btn" style="margin-left: 16px;">Read More</a>
     </div>
 
     <div class="home-img">
@@ -70,35 +81,35 @@
   </section>
 
   <!-- About section design -->
-  <section class="about bg-second" id="about">
+  <section class="about khp__bg-second" id="about">
     <div class="about-img">
       <img src="/assets/common/imgs/avatars/personal/about_section/img-1_1-transparent.png" id="avatar-about" alt="avatar-2">
     </div>
     <div class="about-content">
-      <h2 class="heading">About <span>Me</span></h2>
+      <h2 class="khp__heading">About <span>Me</span></h2>
       <h3>Frontend Developer!</h3>
       <p>Hello, I'm Dương Khang Hy, or Eric Duong - an enthusiastic Flutter and Frontend developer from Vietnam. With over 1 year of experience, I am passionate about building visually appealing and high-quality mobile applications and websites.</p>
-      <a href="/assets/common/files/cv/MyCV_EN_DuongKhangHy.pdf" class="btn" download="DuongKhangHy-CV">Download CV</a>
+      <a href="/assets/common/files/cv/MyCV_EN_DuongKhangHy.pdf" class="khp__btn" download="DuongKhangHy-CV">Download CV</a>
     </div>
   </section>
 
   <!-- Services section design -->
   <section class="services" id="services">
-    <h2 class="heading">Our <span>Services</span></h2>
+    <h2 class="khp__heading">Our <span>Services</span></h2>
 
     <div class="services-container">
       <div class="services-box">
         <i class='bx bxl-flutter'></i>
         <h3>Flutter Development</h3>
         <p>Flutter can utilize SQLite, Bloc, and RestFul API. I am also currently learning Firebase and continuously updating my knowledge with various other in-depth topics.</p>
-        <a href="#" class="btn">Read More</a>
+        <a href="#" class="khp__btn">Read More</a>
       </div>
 
       <div class="services-box">
         <i class='bx bx-code-alt'></i>
         <h3>Web Development</h3>
         <p>Regarding web development, I can use HTML, CSS, SCSS, JS, and Flutter Web. Additionally, I am currently learning ReactJS.</p>
-        <a href="#" class="btn">Read More</a>
+        <a href="#" class="khp__btn">Read More</a>
       </div>
 
       <!-- <div class="services-box">
@@ -107,14 +118,14 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque pariatur ea, eos praesentium quas consectetur
           adipisci explicabo, minima nisi, harum accusamus! Voluptatem unde dolorum soluta quia placeat, vel ullam
           ducimus.</p>
-        <a href="#" class="btn">Read More</a>
+        <a href="#" class="khp__btn">Read More</a>
       </div> -->
     </div>
   </section>
 
   <!-- Portfolio section design -->
-  <section class="portfolio bg-second" id="portfolio">
-    <h2 class="heading">Latest <span>Project</span></h2>
+  <section class="portfolio khp__bg-second" id="portfolio">
+    <h2 class="khp__heading">Latest <span>Project</span></h2>
 
     <div class="portfolio-container">
       <div class="portfolio-box">
@@ -180,9 +191,19 @@
     </div>
   </section>
 
+  <!-- Begin: Tools -->
+  <section class="tool" id="tool">
+    <h2 class="khp__heading">Some <span>Tools!</span></h2>
+
+    <div class="container">
+      
+    </div>
+  </section>
+  <!-- End: Tools -->
+
   <!-- Contact section design -->
-  <section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me!</span></h2>
+  <section class="contact khp__bg-second" id="contact">
+    <h2 class="khp__heading">Contact <span>Me!</span></h2>
 
     <div class="contact-container">
       <div class="contact-box">
@@ -215,15 +236,17 @@
         <input type="text" placeholder="Email Subject" id="emailSubject">
       </div>
       <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" id="yourMessage"></textarea>
-      <input type="submit" value="Send Message" class="btn" onclick="submitForm()">
+      <input type="submit" value="Send Message" class="khp__btn" onclick="submitForm()">
     </form> -->
 
     <!-- <h4 class="function-development">The function is under development. Please try again later!!!</h4> -->
     <!-- Chức năng đang được phát triển. Vui lòng thử lại sau!!! -->
   </section>
 
+  
+
   <!-- Footer design -->
-  <footer class="footer bg-second">
+  <footer class="footer">
     <div class="footer-text">
       <p>Copyright &copy; 2023 by <a href="https://www.facebook.com/profile.php?id=100081488352512"><span>Duong Khang Hy</span></a> | All Rights Reserved | Source: <a
           href="https://www.youtube.com/watch?v=Tkp3FDgOueM"><span>Codehal</span></a>.
@@ -240,6 +263,9 @@
 
   <!-- Typed js -->
   <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+
+  <!-- Bootstrap JS -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
 
   <!-- Custom js -->
   <script src="/assets/home/js/script.js"></script>
