@@ -199,6 +199,8 @@ function includeHTML() {
   }
 }
 
+// ===Create component portfolio img===
+
 // ===get img screenshot api===
 // https://shot.screenshotapi.net/screenshot? token=G8K7ZX1-T6AMRSJ-NFTCR7G-0PP43B0&url=https%3A%2F%2Fericduong107.github.io%2F&fresh=true&output=image&file_type=png&wait_for_event=load
 
