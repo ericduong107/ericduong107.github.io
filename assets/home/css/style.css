@@ -299,6 +299,10 @@ span {
   width: 35vw;
   /* height: 75vh; */
   border-radius: 10%;
+  -webkit-filter: drop-shadow(1px 1px 2.5rem var(--bg-color))
+    drop-shadow(1px 1px 5rem var(--main-color));
+  filter: drop-shadow(1px 1px 2.5rem var(--bg-color))
+    drop-shadow(1px 1px 5rem var(--main-color));
 }
 
 .about-content h2 {

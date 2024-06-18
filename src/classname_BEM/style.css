@@ -1,0 +1,200 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Jetbrains Mono", Arial, Helvetica, sans-serif;
+}
+
+:root {
+  /* BEM 1 */
+  --color-btn-success: green;
+  --color-btn-warn: #fbbf26;
+  --color-btn-danger: #f8355a;
+
+  /* BEM 2 */
+  --color-msg__title: #000;
+  --color-msg__subTitle: #737373;
+  --color-msg-success: #48d761;
+  --color-msg-error: #f8355a;
+  --color-msg-info: #2c87ea;
+  --color-msg-warning: #fbbf26;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: rgb(243, 243, 243);
+}
+
+body > div {
+  margin: auto;
+}
+
+.section--bg-color-second {
+  background-color: #eeeeee;
+}
+
+.section__heading {
+  padding: 2rem 0;
+  color: darkslategray;
+  text-align: center;
+}
+
+/* Bài tập BEM 1 */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 12px 48px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  min-width: 120px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn + .btn {
+  margin-left: 16px;
+}
+
+.btn__heading {
+  text-align: center;
+}
+
+.btn--success {
+  background-color: var(--color-msg-success);
+}
+
+.btn--warn {
+  background-color: var(--color-msg-warning);
+}
+
+.btn--info {
+  background-color: var(--color-msg-info);
+}
+
+.btn--danger,
+.btn--error {
+  background-color: var(--color-msg-error);
+}
+
+.btn--disabled {
+  cursor: default;
+  opacity: 0.5 !important;
+}
+
+.btn--size-l {
+  padding: 16px 56px;
+}
+
+.btn--size-s {
+  padding: 8px 32px;
+}
+
+/* Bài tập BEM 2 */
+.section__toast_message {
+  height: 100vh;
+}
+
+#toast {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px 0;
+  min-width: 300px;
+  max-width: 450px;
+  border-radius: 5px;
+  border-left: 12px solid var(--color-msg);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+  transition: all linear 0.3s;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(calc(100% + 2rem));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+.toast + .toast {
+  margin-top: 24px;
+}
+
+.toast__icon {
+  color: var(--color-msg);
+  font-size: 2rem;
+}
+
+.toast__body {
+  flex-grow: 1;
+}
+
+.toast__title {
+  font-size: 1.1rem;
+  color: var(--color-msg__title);
+  font-weight: 700;
+  /* text-transform: capitalize; */
+}
+
+.toast__msg {
+  color: var(--color-msg__subTitle);
+  font-size: 0.9rem;
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.toast__icon,
+.toast__close {
+  padding: 0 16px;
+}
+
+.toast__close {
+  align-self: flex-start;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.toast--success {
+  --color-msg: var(--color-msg-success);
+}
+
+.toast--info {
+  --color-msg: var(--color-msg-info);
+}
+
+.toast--error {
+  --color-msg: var(--color-msg-error);
+}
+
+.toast--warning {
+  --color-msg: var(--color-msg-warning);
+}
