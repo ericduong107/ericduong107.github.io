@@ -46,6 +46,10 @@ section {
   padding: 10rem 9% 2rem;
 }
 
+section:nth-child(odd) {
+  background: var(--second-bg-color);
+}
+
 span {
   color: var(--main-color);
 }
