@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Website của Dương Ngọc Mỹ Nhi – Lớp 12A15.36</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		/* common */
+		.color-blue { color: blue !important; }
+		.color-red { color: red !important; }
+		.uppercase { text-transform: uppercase !important; }
+		.capitalize { text-transform: capitalize !important; }
+		.lowercase { text-transform: lowercase !important; }
+		.bold { font-weight: bold !important; }
+		.underline {
+			text-decoration-line: underline !important;
+			text-decoration-thickness: 2px !important;
+		}
+
+		/* quote */
+		.quote::before {
+			content: "\201C";
+		}
+
+		.quote::after {
+			content: "\201D";
+		}
+
+		/* main */
+		.main {
+			position: relative;
+			border: 5px solid black;
+		}
+
+		.main::before {
+			--padding-inner: 8px;
+
+			content: "";
+			width: calc(100% + var(--padding-inner) * 2);
+			height: calc(100% + var(--padding-inner) * 2);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			background: transparent;
+			border: 1px solid black;
+		}
+
+		/* header */
+		.header {
+			width: 100%;
+			border-bottom: 1px solid black;
+			padding: 1.5rem 0 4px;
+		}
+		.header__title {
+			text-align: center;
+			font-size: 2rem;
+		}
+
+		/* body */
+		.body {
+			--padding-horizontal: 2rem;
+
+			padding-top: 0;
+			padding-bottom: 1rem;
+			padding-left: var(--padding-horizontal);
+			padding-right: calc(var(--padding-horizontal) - 1rem);
+		}
+
+		/* info-list */
+		.info-list {
+			margin-top: 1rem;
+			line-height: 1.4;
+		}
+
+		.info-list .info-item {
+			color: green;
+			font-size: 1.2rem;
+			letter-spacing: 0.8px;
+		}
+
+		/* avatar */
+		.avatar__img {
+			height: 200px;
+
+			/*height: ; */
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<!-- Tiêu đề -->
+		<div class="header">
+			<h1 class="header__title color-red uppercase">
+				Thông tin cá nhân
+			</h1>
+		</div>
+
+		<div class="body">
+			<!-- Danh sách thông tin -->
+			<ol class="info-list">
+				<li class="info-item">
+					Họ và tên: 
+					<i class="color-red uppercase bold" style="font-size: 1.4rem;">
+						Dương Ngọc Mỹ Nhi
+					</i>
+				</li>
+				<li class="info-item">
+					Học sinh lớp: <span class="color-blue">12A15. Mã số: 36</span>
+				</li>
+				<li class="info-item">
+					Ngày sinh: <span class="color-blue">25/09/2007</span>
+				</li>
+				<li class="info-item">
+					Nơi sinh: <span class="color-blue">Thành phố Hồ Chí Minh</span>
+				</li>
+				<li class="info-item">
+					Địa chỉ nhà: 
+					<span class="color-blue capitalize">
+						60/6/2A, Kp 1, Tổ 11, Đường TL29, P. Thạnh Lộc, Q12
+					</span>
+				</li>
+				<li class="info-item">
+					Sở thích: <span class="color-blue">Vẽ, nghe nhạc, đọc sách</span>
+				</li>
+				<li class="info-item">
+					Sở trường: <span class="color-blue lowercase">Vẽ</span>
+				</li>
+
+				<!-- Có thể sử dụng: Mở (&ldquo;) và đóng (&rdquo;) -->
+				<!-- underline có thể sử dụng span -->
+				<li class="info-item">
+					Châm ngôn sống yêu thích: 
+					<span class="quote color-red bold">Sau <u>cơn mưa</u> trời sẽ <u>sáng</u> và tôi sẽ <u>vượt qua</u> mọi <u>bão giông</u></span>
+				</li>
+			</ol>
+
+			<!-- Hình ảnh -->
+			<div class="avatar">
+				<img class="avatar__img" alt="avatar"
+					src="https://ericduong107.github.io/assets/DuongNgocMyNhi/avatar.jpg" 
+					onerror="this.onerror=null; this.src='./avatar.jpg';" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>
