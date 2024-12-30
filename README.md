@@ -17,3 +17,10 @@
 ### Contact Form UI hoặc Contact Page
 - Tham khảo:
   - https://uiverse.io/andrew-demchenk0/ordinary-lizard-16
+
+-----------------------------------------------
+# ericduong107.github.io/apis
+
+## Option 1: Nghiên cứu thêm chạy động khi thay đổi dữ liệu bằng một UI khác có thể chạy được cập nhật dữ liệu
+
+## Option 2: Nếu Option 1 không thành công sẽ dùng file json như một giải pháp thay thế
