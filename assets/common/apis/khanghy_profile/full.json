@@ -1,0 +1,86 @@
+{
+  "author": "Dương Khang Hy",
+  "statusCode": 200,
+  "data": {
+    "bodySettings": { "primaryColor": "" },
+    "header": {
+      "logo": [
+        { "type": "img", "value": "" },
+        { "type": "text", "value": "Khang Hy" }
+      ],
+      "navLinksList": [
+        { "href": "#home", "text": "Home" },
+        { "href": "#about", "text": "About" },
+        { "href": "#services", "text": "Services" },
+        { "href": "#portfolio", "text": "Portfolio" },
+        { "href": "#contact", "text": "Contact" }
+      ]
+    },
+    "homeSection": {},
+    "aboutSection": {
+      "title": "Frontend Developer!",
+      "urlImg": [
+        {
+          "transparent": true,
+          "size": "1:1",
+          "url": "/assets/common/imgs/avatars/personal/about_section/img-1_1-transparent.png"
+        },
+        {
+          "transparent": false,
+          "size": "1:1",
+          "url": "/assets/common/imgs/avatars/personal/about_section/img-1_1.png"
+        }
+      ],
+      "describe": "Hello, I am Duong Khang Hy, an accountable and creative individual, always seeking opportunities for growth and learning. My strengths lie in effective teamwork, good communication skills, and flexible problem-solving abilities. However, my weaknesses include the need to improve time management skills and maintaining mental stability in high-pressure environments.<br /><br />I aspire to work at this company because I believe it offers a creative, exciting work environment and vast career development opportunities. I want to contribute to the company's mission and growth goals through my experience and capabilities, while learning and developing myself to reach the highest potential in my career.",
+      "downloadCv": {
+        "fileUrl": "/assets/common/files/cv/CV_Duong_Khang_Hy_Frontend_Developer_EN.pdf",
+        "fileName": "DuongKhangHy-CV"
+      }
+    },
+    "servicesSection": [
+      {
+        "title": "Flutter Development",
+        "iconClass": "bx bxl-flutter",
+        "describe": "Flutter can utilize SQLite, Bloc, and RestFul API. I am also currently learning Firebase and continuously updating my knowledge with various other in-depth topics.",
+        "url": ""
+      },
+      {
+        "title": "Web Development",
+        "iconClass": "bx bx-code-alt",
+        "describe": "Regarding web development, I can use HTML, CSS, SCSS, JS, and Flutter Web. Additionally, I am currently learning ReactJS.",
+        "url": ""
+      }
+    ],
+    "portfolioSection": [
+      {
+        "projectName": "Project profile page - Duong Khang Hy - HTML/CSS/JS",
+        "client": "Personal",
+        "title": "My Portfolio",
+        "subTitle": "Introduce yourself, my projects have worked on or are currently involved in, and some my services can offer.",
+        "describe": "Used to contain essential personal information for both Employers and Customers. Such as Contact Information, Personal Images, Self-Introduction, and Details of Previous and Ongoing Projects.",
+        "accountsLogin": { "hy.duong@openmed.com.vn": "0963500454" },
+        "technologyUse": ["HTML", "CSS", "JS"],
+        "urlImgPortfolio": "/assets/home/img/portfolio/portfolio-1.png",
+        "urlProduct": {
+          "ios": "",
+          "android": "",
+          "website": "http://ericduong107.github.io",
+          "macos": "",
+          "window": "",
+          "linux": "",
+          "windowPhone": "",
+          "websiteDashboard": ""
+        }
+      }
+    ],
+    "contactSection": [
+      { "text": "Call Me", "value": "+84 963500454" },
+      { "text": "Email", "value": "duongkhanghy.it@gmail.com" },
+      {
+        "text": "Location",
+        "value": "District 12 - Ho Chi Minh City - Viet Nam"
+      }
+    ],
+    "footer": {}
+  }
+}
