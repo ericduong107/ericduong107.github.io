@@ -1,26 +1,24 @@
-# ericduong107.github.io
+<!-- ========================= Main ========================= -->
+<!-- I. Giới thiệu ngắn gọn -->
+## 👋 Hi, I'm Eric Duong (DK Hy)
+🚀 Flutter Developer | Frontend Developer
 
-## Tham khảo làm UI mới và sử dụng ReactJS để làm giao diện mới cho ericduong107.github.io
-### UI mới: 
-- Làm tương tự trang cũ
-- Thêm nhiều animation mới
-- Chỉnh sửa vài chỗ
-- Chỉnh lại router trên nav của home: (Ưu tiên: cho option 2 vì trực quan hơn)
-  - Option 1: Khi bấm vào sẽ chạy đến mục có ID nằm trên Home nếu bấm viewmore sẽ nhảy đến trang chi tiết hoặc trang danh sách của mục đó
-  - Option 2: Khi bấm vào sẽ chạy đến trang chi tiết hoặc trang danh sách của mục đó
-- Cấu trúc lại assets
-### Login/SignUp UI:
-- Tham khảo:
-  - https://uiverse.io/andrew-demchenk0/afraid-cougar-9
-  - https://uiverse.io/andrew-demchenk0/little-treefrog-9
-  - https://uiverse.io/andrew-demchenk0/great-cow-55
-### Contact Form UI hoặc Contact Page
-- Tham khảo:
-  - https://uiverse.io/andrew-demchenk0/ordinary-lizard-16
+💻 Passionate about building scalable apps & beautiful UI/UX
 
------------------------------------------------
-# ericduong107.github.io/apis
+🌱 Currently exploring: AI integration into frontend apps
 
-## Option 1: Nghiên cứu thêm chạy động khi thay đổi dữ liệu bằng một UI khác có thể chạy được cập nhật dữ liệu
+<!-- II. Kỹ năng chính -->
+## 🛠️ Tech Stack
+- **Frontend:** Angular, HTML, CSS, TypeScript
+- **Mobile:** Flutter (Dart)
+- **Other:** Git, REST API
 
-## Option 2: Nếu Option 1 không thành công sẽ dùng file json như một giải pháp thay thế
+<!-- III. Các dự án tiêu biểu -->
+## 🌟 Featured Projects
+- [🌐 Portfolio Website](https://ericduong107.github.io)
+  *HTML, CSS, JS* - Trang portfolio cá nhân giới thiệu kỹ năng và dự án.
+
+<!-- V. Liên hệ -->
+## 📫 Contact Me
+- 🌐 [Portfolio Website](https://ericduong107.github.io)
+- 📧 Email: ericduong107@gmail.com
