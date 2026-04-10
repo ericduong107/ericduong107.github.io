@@ -8,6 +8,26 @@
     <ul id="file-list">Đang tải...</ul>
 
     <script>
+        function copyCurrentLink(url, index) {        
+            // Sử dụng Clipboard API để lưu vào bộ nhớ tạm
+            navigator.clipboard.writeText(url).then(() => {
+                // Thông báo cho người dùng (tùy chọn)
+                const btn = document.getElementById(`copyBtn${index}`);
+                const originalText = btn.innerText;
+                
+                btn.innerText = "Đã copy!";
+                btn.style.backgroundColor = "#4CAF50"; // Đổi màu xanh cho đẹp
+                
+                // Trở lại trạng thái cũ sau 2 giây
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = "";
+                }, 2000);
+            }).catch(err => {
+                console.error('Lỗi khi copy: ', err);
+            });
+        }
+        
         // Thay username và repo của bạn vào đây
         const user = 'ericduong107';
         const repo = 'ericduong107.github.io';
@@ -19,15 +39,38 @@
             const listElement = document.getElementById('file-list');
             listElement.innerHTML = '';
 
-            data.forEach(file => {
+            data.forEach((file, index) => {
                 if (file.name === 'index.html') return; // Bỏ qua file index.html
-              
+                
+                // console.log('file', file);
+                
                 const li = document.createElement('li');
                 // Phân biệt icon cho thư mục và file
                 const icon = file.type === 'dir' ? '📁' : '📄';
+                
+                const imageLink = `${repo}/${path}/${file.name}`;
+                const btnCopyLink = `<button onclick="copyCurrentLink('${imageLink}', ${index})" id="copyBtn${index}">Sao chép Link</button>`;
 
-                li.innerHTML = `${icon} <a href="${file.name}">${file.name}</a>`;
+                li.innerHTML = `
+                    ${icon} 
+                    <a href="${file.name}" target="_blank" rel="noopener noreferrer">
+                        ${file.name}
+                    </a> 
+                    ${btnCopyLink}
+                `;
                 // li.innerHTML = `${icon} <a href="${file.download_url || file.html_url}">${file.name}</a>`;
+
+                // Style gọn gàng hơn bằng Object.assign
+                Object.assign(li.style, {
+                    display: 'flex',
+                    gap: '10px',
+                    alignItems: 'center',
+                    fontSize: '16px',
+                    marginBottom: '8px',
+                    padding: '5px',
+                    borderBottom: '1px solid #eee',
+                    textDecoration: 'none'
+                });
               
                 listElement.appendChild(li);
             });
