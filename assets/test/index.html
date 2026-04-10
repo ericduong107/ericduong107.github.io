@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Danh sách file</title>
+</head>
+<body>
+    <h2>Danh sách file trong thư mục</h2>
+    <ul id="file-list">Đang tải...</ul>
+
+    <script>
+        // Thay username và repo của bạn vào đây
+        const user = 'ericduong107';
+        const repo = 'ericduong107.github.io';
+        const path = 'assets/test'; // Để trống nếu muốn lấy ở thư mục gốc
+
+        async function getFiles() {
+            const response = await fetch(`https://api.github.com/repos/${user}/${repo}/contents/${path}`);
+            const data = await response.json();
+            const listElement = document.getElementById('file-list');
+            listElement.innerHTML = '';
+
+            data.forEach(file => {
+                if (file.name === 'index.html') return; // Bỏ qua file index.html
+              
+                const li = document.createElement('li');
+                // Phân biệt icon cho thư mục và file
+                const icon = file.type === 'dir' ? '📁' : '📄';
+
+                li.innerHTML = `${icon} <a href="${file.name}">${file.name}</a>`;
+                // li.innerHTML = `${icon} <a href="${file.download_url || file.html_url}">${file.name}</a>`;
+              
+                listElement.appendChild(li);
+            });
+        }
+
+        getFiles();
+    </script>
+</body>
+</html>
