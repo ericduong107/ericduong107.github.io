@@ -48,7 +48,7 @@
                 // Phân biệt icon cho thư mục và file
                 const icon = file.type === 'dir' ? '📁' : '📄';
                 
-                const imageLink = `${repo}/${path}/${file.name}`;
+                const imageLink = `https://${repo}/${path}/${file.name}`;
                 const btnCopyLink = `<button onclick="copyCurrentLink('${imageLink}', ${index})" id="copyBtn${index}">Sao chép Link</button>`;
 
                 li.innerHTML = `
