@@ -11,6 +11,13 @@
   <script src="/assets/common/js/changeTitleTag.js"></script>
   <script>
     changeTitle("My Portfolio");
+
+    // window.location.pathname sẽ lấy phần sau tên miền (ví dụ: /src-shortcut hoặc /src-shortcut/)
+    const currentPath = window.location.pathname.replace(/\/$/, ""); // Loại bỏ dấu / ở cuối nếu có
+    
+    if (currentPath === '/ds-tai-nguyen') {
+        window.location.href = 'https://ericduong107.github.io/resources/';
+    }
   </script>
 
   <meta name="description" content="Đây là trang cá nhân của tôi. Gồm có phần giới thiệu bản thân, hình ảnh, những kỹ năng, kinh nghiệm, sản phẩm, dự án.">
