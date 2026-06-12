@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Tài Nguyên</title>
+    <style>
+        /* CSS Cơ bản để giao diện gọn gàng, dễ nhìn */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        /* Bố cục lưới (Grid) tự động co giãn */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 100px));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Thẻ tài nguyên (Card) */
+        .resource-card {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none; /* Bỏ gạch chân của thẻ a */
+            display: block;
+        }
+
+        /* Hiệu ứng khi di chuột vào */
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-color: #3498db;
+        }
+
+        /* Biểu tượng đại diện bằng emoji cho đơn giản */
+        .icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #7f8c8d;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>KHO TÀI NGUYÊN HOẠT HỌA & THIẾT KẾ</h1>
+
+    <div class="container">
+
+        <a href="./images target="_blank" class="resource-card">
+            <div class="icon">🖼️</div>
+            <div class="title">Kho Hình Ảnh</div>
+            <div class="description">Hình ảnh dùng cá nhân. Phi lợi nhuận</div>
+        </a>
+
+        <!-- <a href="https://fontawesome.com" target="_blank" class="resource-card">
+            <div class="icon">📐</div>
+            <div class="title">Icon SVG / Vector</div>
+            <div class="description">Các icon định dạng SVG, Vector chỉnh sửa dễ dàng.</div>
+        </a> -->
+
+        <!-- <a href="https://fonts.google.com" target="_blank" class="resource-card">
+            <div class="icon">🔤</div>
+            <div class="title">Font Chữ Đẹp</div>
+            <div class="description">Thư viện font chữ Google Fonts và font việt hóa.</div>
+        </a> -->
+
+        <!-- <a href="https://coolors.co" target="_blank" class="resource-card">
+            <div class="icon">🎨</div>
+            <div class="title">Bảng Màu (Colors)</div>
+            <div class="description">Gợi ý phối màu và các palette màu xu hướng.</div>
+        </a> -->
+
+        <!-- <a href="https://github.com" target="_blank" class="resource-card">
+            <div class="icon">💻</div>
+            <div class="title">Tài Nguyên Code</div>
+            <div class="description">Các component UI, template HTML/CSS có sẵn.</div>
+        </a> -->
+
+    </div>
+
+</body>
+</html>
