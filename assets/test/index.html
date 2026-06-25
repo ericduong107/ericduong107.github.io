@@ -171,7 +171,9 @@
                 }
 
                 const fetchDatePromises = data.map(async (file) => {
-                    if (file.name === 'index.html') return null;
+                    if (['index.html', 'style.css', 'script.js', 'README.md'].includes(file.name)) {
+                        return null;
+                    }
 
                     // Lấy phần mở rộng (đuôi file)
                     let ext = 'Thư mục';
