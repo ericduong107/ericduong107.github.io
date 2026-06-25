@@ -66,6 +66,21 @@
             margin-left: auto;
             margin-right: 15px;
         }
+
+        /* KHU VỰC THÊM MỚI: Thẻ chứa ảnh Preview */
+        #image-preview {
+            position: fixed;
+            display: none; /* Mặc định ẩn */
+            pointer-events: none; /* Tránh chuột bị giật khi đè vào ảnh */
+            max-width: 250px;
+            max-height: 250px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-radius: 6px;
+            padding: 4px;
+            z-index: 9999;
+        }
     </style>
 </head>
 <body>
@@ -96,6 +111,8 @@
 
     <ul id="file-list">Đang tải danh sách và cấu trúc ngày tháng...</ul>
 
+    <img id="image-preview" src="" alt="Preview">
+
     <script>
         // Cấu hình tài khoản GitHub của bạn
         const user = 'ericduong107';
@@ -104,6 +121,9 @@
 
         // Biến toàn cục lưu trữ danh sách file gốc để lọc dữ liệu
         let allFiles = [];
+
+        // Các định dạng file được phép preview ảnh
+        const imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg', 'bmp'];
 
         // Hàm copy link vào bộ nhớ tạm
         function copyCurrentLink(url, index) {        
@@ -184,6 +204,9 @@
                 document.getElementById('ext-select').addEventListener('change', filterAndRender);
                 document.getElementById('sort-select').addEventListener('change', filterAndRender);
 
+                // Khởi tạo các sự kiện di chuột cho Preview ảnh (chỉ cần gán 1 lần bằng cơ chế Event Delegation)
+                initPreviewEvents();
+
                 // Tiến hành lọc và vẽ giao diện lần đầu tiên
                 filterAndRender();
 
@@ -209,6 +232,38 @@
                 option.value = ext;
                 option.innerText = `.${ext}`;
                 extSelect.appendChild(option);
+            });
+        }
+
+        // KHU VỰC THÊM MỚI: Quản lý sự kiện Hover Preview bằng Event Delegation (Ủy nhiệm sự kiện)
+        function initPreviewEvents() {
+            const previewImg = document.getElementById('image-preview');
+            const fileList = document.getElementById('file-list');
+
+            fileList.addEventListener('mouseover', (e) => {
+                // Kiểm tra xem phần tử được hover có phải là thẻ <a> có data-preview không
+                const target = e.target.closest('a[data-preview]');
+                if (!target) return;
+
+                const src = target.getAttribute('data-preview');
+                previewImg.src = src;
+                previewImg.style.display = 'block';
+            });
+
+            fileList.addEventListener('mousemove', (e) => {
+                if (previewImg.style.display === 'block') {
+                    // Đặt vị trí ảnh preview cách con trỏ chuột 15px để tránh bị đè dữ liệu
+                    previewImg.style.left = (e.clientX + 15) + 'px';
+                    previewImg.style.top = (e.clientY + 15) + 'px';
+                }
+            });
+
+            fileList.addEventListener('mouseout', (e) => {
+                const target = e.target.closest('a[data-preview]');
+                if (!target) return;
+
+                previewImg.style.display = 'none';
+                previewImg.src = ''; // Xóa src để giải phóng bộ nhớ tạm
             });
         }
 
