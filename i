@@ -33,7 +33,8 @@ fi
 GITHUB_USER="ericduong107"
 REPO_NAME="ubuntu_software_installer"
 BRANCH="main"
-REPO_URL="https://raw.githubusercontent.com/${GITHUB_USER}/${REPO_NAME}/${BRANCH}/scripts"
+# REPO_URL="https://raw.githubusercontent.com/${GITHUB_USER}/${REPO_NAME}/${BRANCH}/scripts"
+REPO_URL="."
 
 # ===========================
 # Bước 1: Chọn Ngôn Ngữ (Radio List)
@@ -51,6 +52,8 @@ if [ $? -ne 0 ] || [ -z "$LANG_CHOICE" ]; then
 fi
 
 LANG_CHOICE=$(echo "$LANG_CHOICE" | tr -d '"')
+
+export LANG_CHOICE  # Xuất biến này ra môi trường
 
 # Thiết lập ngôn ngữ hiển thị
 if [ "$LANG_CHOICE" = "vi" ]; then
