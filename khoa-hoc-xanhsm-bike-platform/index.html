@@ -1,234 +1,214 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tài Liệu Đào Tạo — Xanh SM Bike Platform</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        body { background: #f0f8f0; padding: 20px; line-height: 1.6; }
-        .container { max-width: 900px; margin: 0 auto; background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,100,50,0.1); padding: 30px; }
-        h1 { text-align: center; color: #008844; border-bottom: 3px solid #00cc66; padding-bottom: 15px; margin-bottom: 30px; }
-        h2 { color: #006633; margin: 25px 0 12px; border-left: 4px solid #00cc66; padding-left: 12px; }
-        h3 { color: #007744; margin: 18px 0 10px; }
-        .disclaimer { background: #f8f9fa; border-left: 5px solid #6c757d; padding: 18px; margin: 25px 0; border-radius: 4px; font-size: 0.95em; color: #333; }
-        .disclaimer strong { color: #444; }
-        .alert { background: #fff3cd; border-left: 5px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px; }
-        .important { background: #e8f5e9; border-left: 5px solid #00cc66; padding: 15px; margin: 20px 0; border-radius: 4px; }
-        .highlight { color: #d63031; font-weight: bold; }
-        .success { color: #008844; font-weight: bold; }
-        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-        th { background: #008844; color: white; }
-        tr:nth-child(even) { background: #f9f9f9; }
-        ul, ol { margin: 12px 0 12px 25px; }
-        li { margin: 8px 0; }
-        .footer { text-align: center; margin-top: 40px; color: #666; font-size: 0.9em; border-top: 1px solid #eee; padding-top: 20px; }
-        .label-platform { display: inline-block; background: #00cc66; color: white; padding: 6px 14px; border-radius: 20px; font-weight: bold; margin-bottom: 15px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tài Liệu Đào Tạo — Xanh SM Bike Platform</title>
+<style>
+* {margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body {background:#f0f8f0;padding:20px;line-height:1.6;}
+.container {max-width:900px;margin:0 auto;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(0,100,50,.1);padding:30px;}
+h1 {text-align:center;color:#008844;border-bottom:3px solid #00cc66;padding-bottom:15px;margin-bottom:20px;}
+h2 {color:#006633;margin:25px 0 12px;border-left:4px solid #00cc66;padding-left:12px;scroll-margin-top:80px;}
+h3 {color:#007744;margin:18px 0 10px;}
+.disclaimer {background:#f8f9fa;border-left:5px solid #6c757d;padding:18px;margin:20px 0;border-radius:4px;font-size:.95em;}
+.alert {background:#fff3cd;border-left:5px solid #ffc107;padding:15px;margin:20px 0;border-radius:4px;}
+.important {background:#e8f5e9;border-left:5px solid #00cc66;padding:15px;margin:20px 0;border-radius:4px;}
+.highlight {color:#d63031;font-weight:bold;}
+.success {color:#008844;font-weight:bold;}
+table {width:100%;border-collapse:collapse;margin:15px 0;}
+th,td {border:1px solid #ddd;padding:10px;text-align:left;}
+th {background:#008844;color:#fff;}
+tr:nth-child(even) {background:#f9f9f9;}
+ul,ol {margin:12px 0 12px 25px;}
+li {margin:8px 0;}
+.footer {text-align:center;margin-top:40px;color:#666;font-size:.9em;border-top:1px solid #eee;padding-top:20px;}
+.label-platform {display:inline-block;background:#00cc66;color:#fff;padding:6px 14px;border-radius:20px;font-weight:bold;margin-bottom:15px;}
+.toc-container {background:#f8f9fa;border-radius:8px;padding:15px 20px;margin:20px 0;}
+.toc-toggle {cursor:pointer;font-weight:bold;color:#006633;display:flex;align-items:center;justify-content:space-between;}
+.toc-icon {transition:transform .3s;}
+.toc-closed .toc-icon {transform:rotate(-90deg);}
+.toc-content {overflow:hidden;transition:max-height .3s ease;max-height:1000px;}
+.toc-closed .toc-content {max-height:0;}
+.toc-list {list-style:none;margin:10px 0 0 0;padding:0;}
+.toc-list li {margin:6px 0;}
+.toc-list a {color:#007744;text-decoration:none;}
+.tag {display:inline-block;padding:2px 8px;border-radius:4px;font-size:.85em;font-weight:bold;margin-left:8px;}
+.tag-lock {background:#e53935;color:#fff;}
+.tag-fine {background:#ff9800;color:#fff;}
+.tag-warning {background:#fdd835;color:#333;}
+.tag-cancel {background:#9c27b0;color:#fff;}
+.support-box {background:#e3f2fd;border-left:5px solid #1976d2;padding:15px;margin:20px 0;border-radius:4px;}
+.phone-num {font-size:1.2em;font-weight:bold;color:#1976d2;}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>🛵 TÀI LIỆU ĐÀO TẠO TÀI XẾ</h1>
-        <div style="text-align: center; margin-bottom: 20px;">
-            <span class="label-platform">XANH SM BIKE PLATFORM</span>
-        </div>
+<div class="container">
+<h1>🛵 TÀI LIỆU ĐÀO TẠO TÀI XẾ</h1>
+<div style="text-align:center;margin-bottom:20px;"><span class="label-platform">XANH SM BIKE PLATFORM</span></div>
 
-        <!-- === PHẦN MIỄN TRỪ TRÁCH NHIỆM === -->
-        <div class="disclaimer">
-            <strong>📌 TUYÊN BỐ MIỄN TRỪ TRÁCH NHIỆM:</strong><br>
-            Tài liệu này được biên soạn dựa trên nội dung tổng hợp từ khóa đào tạo và thông tin công bố chung, chỉ phục vụ mục đích tham khảo, tự học cá nhân.<br>
-            Nội dung có thể chưa cập nhật kịp thời hoặc có điểm khác biệt so với quy định chính thức mới nhất của công ty. <strong>Không chịu trách nhiệm pháp lý đối với bất kỳ thông tin nào trong tài liệu này.</strong><br>
-            Để đảm bảo chính xác tuyệt đối, vui lòng tham khảo tài liệu chính thức do Xanh SM cung cấp trực tiếp tại khóa đào tạo, văn phòng hoặc trên ứng dụng chính thống.
-        </div>
-        <!-- ================================= -->
+<div class="disclaimer">
+<strong>📌 TUYÊN BỐ MIỄN TRỪ TRÁCH NHIỆM:</strong><br>
+Tài liệu này chỉ phục vụ mục đích tham khảo, tự học cá nhân. Nội dung có thể chưa cập nhật kịp thời hoặc khác biệt so với quy định chính thức mới nhất của công ty. <strong>Không chịu trách nhiệm pháp lý đối với bất kỳ thông tin nào trong tài liệu này.</strong> Để đảm bảo chính xác tuyệt đối, vui lòng tham khảo tài liệu chính thức do Xanh SM cung cấp.
+</div>
 
-        <div class="alert">
-            <strong>📌 Đối tượng áp dụng:</strong> Tài xế sử dụng xe máy điện VinFast do chính mình sở hữu, đăng ký hoạt động trên nền tảng Xanh SM.
-        </div>
+<div class="toc-container toc-closed" id="tocBox">
+<div class="toc-toggle" onclick="document.getElementById('tocBox').classList.toggle('toc-closed')">
+<span>📋 MỤC LỤC (Nhấn mở/đóng)</span><span class="toc-icon">▼</span>
+</div>
+<div class="toc-content">
+<ul class="toc-list">
+<li><a href="#sec1">I. TỔNG QUAN BIKE PLATFORM</a></li>
+<li><a href="#sec2">II. ĐIỀU KIỆN ĐĂNG KÝ</a></li>
+<li><a href="#sec3">III. 3 LOẠI ĐƠN HÀNG</a></li>
+<li><a href="#sec4">IV. PHÂN LOẠI XỬ LÝ VI PHẠM</a></li>
+<li><a href="#sec5">V. TIÊU CHUẨN DỊCH VỤ</a></li>
+<li><a href="#sec6">VI. QUẢN LÝ XE & TIẾT KIỆM PIN</a></li>
+<li><a href="#sec7">VII. XỬ LÝ TÌNH HUỐNG</a></li>
+<li><a href="#sec8">VIII. DOANH THU & TRÁCH NHIỆM</a></li>
+<li><a href="#sec9">IX. HỖ TRỢ KHẨN CẤP</a></li>
+</ul>
+</div>
+</div>
 
-        <h2>I. TỔNG QUAN VỀ BIKE PLATFORM</h2>
-        <p><strong>Xanh SM Bike Platform</strong> là hình thức tài xế tự sở hữu xe máy điện VinFast, đăng ký kết nối với hệ thống để nhận chuyến vận chuyển khách hàng.</p>
-        <ul>
-            <li>✅ Xe máy điện do <span class="success">chính bạn sở hữu</span> (đã đăng ký hợp lệ)</li>
-            <li>✅ Chỉ trả phí dịch vụ nền tảng, không trả tiền thuê xe hàng tháng</li>
-            <li>✅ Tự chủ động quản lý thời gian & quãng đường chạy</li>
-            <li>✅ Tiêu chuẩn dịch vụ: <span class="success">An toàn – Chuyên nghiệp – Tận tâm – Văn minh</span></li>
-        </ul>
+<div class="alert"><strong>📌 Đối tượng:</strong> Tài xế dùng xe máy điện VinFast tự sở hữu, đăng ký trên nền tảng Xanh SM.</div>
 
-        <h2>II. ĐIỀU KIỆN ĐĂNG KÝ & HOẠT ĐỘNG</h2>
-        
-        <h3>1. Hồ sơ cá nhân</h3>
-        <ul>
-            <li>CCCD còn hiệu lực</li>
-            <li>Bằng lái xe <strong>A1 hoặc A2</strong> còn hiệu lực</li>
-            <li>Giấy khám sức khỏe lái xe còn hiệu lực</li>
-            <li>Tài khoản ngân hàng chính chủ</li>
-            <li>Số điện thoại & SIM chính chủ</li>
-        </ul>
+<h2 id="sec1">I. TỔNG QUAN BIKE PLATFORM</h2>
+<p>Nhận 3 loại đơn: <strong>Khách</strong> · <strong>Food</strong> · <strong>Express</strong></p>
+<ul>
+<li>✅ Xe tự sở hữu, không trả thuê xe</li>
+<li>✅ Chỉ trả phí dịch vụ theo từng đơn hoàn thành</li>
+<li>✅ Tự chủ thời gian, chọn loại đơn phù hợp</li>
+<li>✅ Nguyên tắc: <span class="success">An toàn – Chuyên nghiệp – Tận tâm – Văn minh</span></li>
+</ul>
 
-        <h3>2. Hồ sơ phương tiện — RIÊNG CỦA PLATFORM</h3>
-        <ul>
-            <li>Xe máy điện VinFast hợp lệ, được công ty xác nhận</li>
-            <li>Giấy đăng ký xe (bản gốc & bản sao)</li>
-            <li>Bảo hiểm trách nhiệm dân sự còn hiệu lực</li>
-            <li>Xe trong tình trạng tốt, không có hỏng hóc nghiêm trọng</li>
-            <li>Đồng bộ dữ liệu & kích hoạt kết nối với ứng dụng Xanh SM</li>
-        </ul>
+<h2 id="sec2">II. ĐIỀU KIỆN ĐĂNG KÝ</h2>
+<h3>1. Hồ sơ cá nhân</h3>
+<ul>
+<li>CCCD, bằng lái A1/A2, giấy khám sức khỏe còn hiệu lực</li>
+<li>TK ngân hàng, số điện thoại & SIM chính chủ</li>
+</ul>
+<h3>2. Hồ sơ phương tiện</h3>
+<ul>
+<li>Xe VinFast hợp lệ, đăng ký + bảo hiểm còn hiệu lực</li>
+<li>Xe tốt, đủ đèn phanh lốp, kết nối đồng bộ với App</li>
+</ul>
+<h3>3. Trang phục</h3>
+<ul>
+<li>✅ Mặc áo đồng phục, quần dài, giày/dép kín</li>
+<li>✅ Đội mũ bảo hiểm khi chạy xe</li>
+</ul>
 
-        <h3>3. Trang phục & Ngoại hình</h3>
-        <ul>
-            <li>✅ Mặc áo đồng phục Xanh SM theo quy định (nếu có)</li>
-            <li>✅ Quần dài, giày/dép kín — không đi dép lê trong nhà</li>
-            <li>✅ Đội mũ bảo hiểm đầy đủ, đúng tiêu chuẩn khi chạy xe</li>
-            <li>✅ Gọn gàng, sạch sẽ, mùi hương cơ thể dễ chịu</li>
-        </ul>
+<h2 id="sec3">III. 3 LOẠI ĐƠN HÀNG</h2>
+<h3>1. ĐƠN KHÁCH</h3>
+<table>
+<tr><th>Bước</th><th>Hành động</th></tr>
+<tr><td>1</td><td>Đăng nhập → Bật "Trực tuyến"</td></tr>
+<tr><td>2</td><td>Xem thông tin → Xác nhận nhanh</td></tr>
+<tr><td>3</td><td>Gọi khách: "Dạ em là tài xế Xanh SM, em đang đến nơi ạ"</td></tr>
+<tr><td>4</td><td>Đón đúng giờ → Chào hỏi → Xác nhận chuyến → <strong>Đưa</strong> mũ bảo hiểm cho khách</td></tr>
+<tr><td>5</td><td>Đi đúng lộ trình, an toàn</td></tr>
+<tr><td>6</td><td>Dừng an toàn → Khách xuống → Kiểm tra đồ → Cảm ơn</td></tr>
+</table>
 
-        <h2>III. SỬ DỤNG ỨNG DỤNG NHẬN CHUYẾN</h2>
-        
-        <table>
-            <tr>
-                <th>Bước</th>
-                <th>Hành động</th>
-            </tr>
-            <tr>
-                <td>1. Đăng nhập</td>
-                <td>Mở App → Nhập số điện thoại → Nhận mã OTP → Trạng thái "Trực tuyến"</td>
-            </tr>
-            <tr>
-                <td>2. Nhận đơn</td>
-                <td>Xem thông tin điểm đi, điểm đến → Xác nhận nhanh — không từ chối vô lý</td>
-            </tr>
-            <tr>
-                <td>3. Liên hệ khách</td>
-                <td><em>"Dạ em là tài xế Xanh SM ạ, em đang đến nơi đón anh/chị"</em></td>
-            </tr>
-            <tr>
-                <td>4. Đón khách</td>
-                <td>Đúng giờ, đúng điểm → Chào hỏi → Xác nhận thông tin chuyến → Tặng/đưa mũ bảo hiểm cho khách</td>
-            </tr>
-            <tr>
-                <td>5. Thực hiện chuyến</td>
-                <td>Đi đúng lộ trình, an toàn, tuân thủ luật giao thông</td>
-            </tr>
-            <tr>
-                <td>6. Kết thúc</td>
-                <td>Dừng xe an toàn → Khách xuống xe → Kiểm tra hành lý → Cảm ơn & hẹn gặp lại</td>
-            </tr>
-        </table>
+<h3>2. ĐƠN FOOD</h3>
+<table>
+<tr><th>Bước</th><th>Hành động</th></tr>
+<tr><td>1</td><td>Xem thông tin quán & người nhận → Xác nhận</td></tr>
+<tr><td>2</td><td>Đến lấy → Nêu số đơn → Kiểm tra gói hàng → Ký nhận</td></tr>
+<tr><td>3</td><td>Giữ hàng chắc chắn, đi đều tránh đổ vỡ</td></tr>
+<tr><td>4</td><td>Liên hệ giao → Kiểm tra cùng khách → Xác nhận trên App</td></tr>
+<tr><td>5</td><td>Thu tiền thu hộ nếu có → Kết thúc</td></tr>
+</table>
 
-        <div class="important">
-            <strong>⚠️ Hành động bị xử lý nghiêm / khóa tài khoản:</strong>
-            <ul>
-                <li>Hủy chuyến sau khi nhận đơn không có lý do chính đáng</li>
-                <li>Đi đường khác không giải thích, tính thêm tiền</li>
-                <li>Không cung cấp/không cho khách dùng mũ bảo hiểm</li>
-                <li>Yêu cầu trả tiền mặt thêm ngoài hóa đơn trên App</li>
-                <li>Chuyển khách sang dịch vụ khác / chạy chui</li>
-                <li>Để người khác dùng tài khoản chạy thay</li>
-            </ul>
-        </div>
+<h3>3. ĐƠN EXPRESS</h3>
+<table>
+<tr><th>Bước</th><th>Hành động</th></tr>
+<tr><td>1</td><td>Xem người gửi/nhận, khối lượng → Xác nhận</td></tr>
+<tr><td>2</td><td>Kiểm tra hàng, không cấm vận chuyển → Xác nhận</td></tr>
+<tr><td>3</td><td>Đóng gói chắc chắn, không đè nặng</td></tr>
+<tr><td>4</td><td>Xác minh người nhận → Giao trực tiếp → Ký nhận/chụp ảnh nếu cần</td></tr>
+<tr><td>5</td><td>Cập nhật App → Thu tiền thu hộ → Kết thúc</td></tr>
+</table>
 
-        <h2>IV. TIÊU CHUẨN DỊCH VỤ BIKE PLATFORM</h2>
-        <ol>
-            <li><strong>Chào hỏi lịch sự:</strong> "Dạ chào anh/chị ạ" — nét mặt thân thiện, nhiệt tình</li>
-            <li><strong>An toàn là trên hết:</strong> Luôn đội mũ, đi đúng làn đường, tốc độ phù hợp, không lạng lách</li>
-            <li><strong>Mũ bảo hiểm cho khách:</strong> Luôn có sẵn, sạch sẽ, đưa khách ngay khi lên xe — nhắc đội đúng cách</li>
-            <li><strong>Xe luôn sạch sẽ & ổn định:</strong> Kiểm tra xe thường xuyên, giữ thân xe sạch, không có mùi hôi</li>
-            <li><strong>Lái xe êm & chắc:</strong> Khởi hành nhẹ, giảm tốc từ từ, tránh phanh gấp — khách không bị ngã</li>
-            <li><strong>Không nghe điện thoại khi lái:</strong> Dừng xe an toàn nếu cần trả lời cuộc gọi</li>
-            <li><strong>Chăm sóc khách khi kết thúc:</strong> Nhắc nhở kiểm tra đồ đạc, chào tạm biệt lịch sự</li>
-        </ol>
+<h2 id="sec4">IV. PHÂN LOẠI XỬ LÝ VI PHẠM</h2>
+<p><span class="tag tag-warning">Cảnh báo</span> · <span class="tag tag-cancel">Mất phí</span> · <span class="tag tag-fine">Phạt tiền</span> · <span class="tag tag-lock">Khóa tài khoản</span></p>
+<table>
+<tr><th>Hành vi</th><th>Mức xử lý</th></tr>
+<tr><td>Hủy đơn không lý do chính đáng</td><td><span class="tag tag-warning">Cảnh báo</span>+<span class="tag tag-cancel">Mất phí</span> → Lần 3: <span class="tag tag-fine">Phạt tiền</span></td></tr>
+<tr><td>Đi đường khác, tính thêm tiền</td><td><span class="tag tag-fine">Phạt gấp đôi</span></td></tr>
+<tr><td>Không đưa mũ bảo hiểm cho khách</td><td><span class="tag tag-warning">Cảnh báo</span> → Lần 2: <span class="tag tag-fine">Phạt tiền</span></td></tr>
+<tr><td>Thu tiền mặt thêm ngoài App</td><td><span class="tag tag-fine">Phạt tiền</span> → Nghiêm trọng: <span class="tag tag-lock">Khóa</span></td></tr>
+<tr><td>Chuyển khách/chạy chui</td><td><span class="tag tag-lock">Khóa vĩnh viễn</span></td></tr>
+<tr><td>Để người khác chạy thay</td><td><span class="tag tag-lock">Khóa vĩnh viễn</span></td></tr>
+<tr><td>Giữ/hỏng/thất lạc hàng hóa</td><td><span class="tag tag-lock">Khóa</span>+Bồi thường</td></tr>
+<tr><td>Đổ vỡ hàng do sơ suất</td><td><span class="tag tag-fine">Bồi thường giá trị</span></td></tr>
+<tr><td>Trễ >15 phút không báo</td><td><span class="tag tag-warning">Cảnh báo</span> → Lặp lại: <span class="tag tag-fine">Phạt tiền</span></td></tr>
+<tr><td>Tắt mạng khi đang có chuyến</td><td><span class="tag tag-warning">Cảnh báo</span> → Lần 3: <span class="tag tag-fine">Phạt tiền</span></td></tr>
+<tr><td>Cãi lộn, thái độ không tốt</td><td><span class="tag tag-warning">Cảnh báo</span> → Lần 2: <span class="tag tag-fine">Phạt tiền</span> → Đánh giá thấp liên tục: <span class="tag tag-lock">Khóa</span></td></tr>
+<tr><td>Giao sai người/địa điểm</td><td><span class="tag tag-fine">Bồi thường + Phạt</span></td></tr>
+<tr><td>Giữ tiền thu hộ</td><td><span class="tag tag-lock">Khóa tài khoản</span></td></tr>
+</table>
 
-        <h2>V. QUẢN LÝ XE & TIẾT KIỆM PIN</h2>
-        
-        <h3>1. Trách nhiệm bảo quản xe</h3>
-        <ul>
-            <li><span class="highlight">Bạn tự quản lý & bảo dưỡng xe</span> theo định kỳ do hãng quy định</li>
-            <li>Kiểm tra: phanh, đèn, lốp, áp suất lốp trước mỗi ca chạy</li>
-            <li>Giữ xe sạch — rửa thường xuyên, không có vết bẩn bám lâu ngày</li>
-            <li>Báo ngay cho công ty khi có hỏng hóc, trục trặc kỹ thuật ảnh hưởng an toàn</li>
-            <li>Không tự ý thay đổi cấu trúc, màu sơn, linh kiện chính của xe</li>
-        </ul>
+<h2 id="sec5">V. TIÊU CHUẨN DỊCH VỤ</h2>
+<ol>
+<li><strong>Chào hỏi lịch sự:</strong> "Dạ chào anh/chị ạ" — thân thiện</li>
+<li><strong>An toàn tuyệt đối:</strong> Đội mũ, đi đúng làn, tốc độ phù hợp, không lạng lách</li>
+<li><strong>Mũ cho khách:</strong> Sạch sẽ, đưa ngay, nhắc đội đúng cách</li>
+<li><strong>Xe luôn sạch:</strong> Kiểm tra trước mỗi ca, không mùi hôi, không bẩn</li>
+<li><strong>Lái xe êm:</strong> Khởi hành nhẹ, phanh từ từ, không đổ vỡ hàng hóa</li>
+<li><strong>Không nghe điện thoại khi lái:</strong> Dừng xe an toàn nếu cần trả lời</li>
+<li><strong>Chăm sóc khách khi kết thúc:</strong> Nhắc kiểm tra đồ, cảm ơn, hẹn gặp lại</li>
+</ol>
 
-        <h3>2. Sử dụng pin & sạc điện hiệu quả</h3>
-        <ul>
-            <li>Theo dõi mức pin thường xuyên → sạc kịp thời, không để cạn hoàn toàn</li>
-            <li>Đạp ga nhẹ nhàng, tránh tăng tốc đột ngột → tiết kiệm pin đáng kể</li>
-            <li>Giảm tốc sớm khi thấy đèn đỏ → tận dụng năng lượng hồi phục</li>
-            <li>Tránh chở nặng quá quy định → hao pin nhanh & nguy hiểm</li>
-            <li>Sạc tại trạm chuẩn, không dùng bộ sạc không chính hãng</li>
-        </ul>
+<h2 id="sec6">VI. QUẢN LÝ XE & TIẾT KIỆM PIN</h2>
+<ul>
+<li><strong>Tự bảo dưỡng:</strong> Kiểm tra phanh, đèn, lốp trước mỗi ca; bảo dưỡng theo định kỳ hãng</li>
+<li><strong>Không thay đổi cấu trúc:</strong> Không tự ý sơn đổi, thay linh kiện chính</li>
+<li><strong>Sạc pin đúng cách:</strong> Không để cạn hoàn toàn; sạc tại trạm chuẩn; không dùng sạc không chính hãng</li>
+<li><strong>Tiết kiệm pin:</strong> Đạp ga nhẹ, giảm tốc sớm, không chở quá tải, giữ áp suất lốp đúng quy định</li>
+</ul>
 
-        <h2>VI. XỬ LÝ TÌNH HUỐNG THƯỜNG GẶP</h2>
-        
-        <table>
-            <tr>
-                <th>Tình huống</th>
-                <th>Cách xử lý đúng</th>
-            </tr>
-            <tr>
-                <td>Khách không muốn đội mũ bảo hiểm</td>
-                <td>Giải thích nhẹ nhàng: <em>"Dạ đây là quy định bắt buộc để đảm bảo an toàn cho anh/chị ạ"</em> → nếu từ chối không chịu, có quyền từ chối phục vụ, báo hỗ trợ</td>
-            </tr>
-            <tr>
-                <td>Khách chở đồ quá nặng/quá lớn</td>
-                <td>Giải thích giới hạn tải trọng → Hỗ trợ chia nhỏ nếu được → Không nhận nếu quá nguy hiểm</td>
-            </tr>
-            <tr>
-                <td>Xe hết pin giữa đường</td>
-                <td>Thông báo khách ngay → Xin lỗi → Sắp xếp phương án hỗ trợ khách → Gọi hỗ trợ kỹ thuật → Không cố chạy tiếp</td>
-            </tr>
-            <tr>
-                <td>Va chạm/giao thông</td>
-                <td>Dừng xe an toàn → Báo khách → Không cãi nhau tại hiện trường → Chụp ảnh → Báo hỗ trợ & cơ quan chức năng nếu cần</td>
-            </tr>
-            <tr>
-                <td>Khách quên đồ trên xe</td>
-                <td>Liên hệ ngay qua App → Giữ gìn cẩn thận → Giao trả theo thỏa thuận → Không giữ cho riêng mình</td>
-            </tr>
-            <tr>
-                <td>Khách đánh giá thấp bất công</td>
-                <td>Không bình luận tiêu cực, không nhắn tin cãi → Gửi khiếu nại trên hệ thống → Bộ phận sẽ xem xét</td>
-            </tr>
-        </table>
+<h2 id="sec7">VII. XỬ LÝ TÌNH HUỐNG</h2>
+<table>
+<tr><th>Tình huống</th><th>Cách xử lý đúng</th></tr>
+<tr><td>Khách không muốn đội mũ</td><td>Giải thích: "Đây là quy định bắt buộc để đảm bảo an toàn ạ" → Không chịu thì có quyền từ chối phục vụ + báo hỗ trợ</td></tr>
+<tr><td>Khách chở đồ quá nặng/lớn</td><td>Giải thích giới hạn → Hỗ trợ chia nhỏ nếu được → Không nhận nếu nguy hiểm</td></tr>
+<tr><td>Hết pin giữa đường</td><td>Báo khách ngay → Xin lỗi → Sắp xếp phương án thay → Gọi hỗ trợ kỹ thuật → Không cố chạy tiếp</td></tr>
+<tr><td>Va chạm giao thông</td><td>Dừng an toàn → Báo khách → Không cãi tại hiện trường → Chụp ảnh → Báo hỗ trợ & cơ quan nếu cần</td></tr>
+<tr><td>Khách quên đồ</td><td>Liên hệ qua App → Giữ cẩn thận → Giao trả theo thỏa thuận → Không giữ riêng</td></tr>
+<tr><td>Đánh giá thấp bất công</td><td>Không bình luận tiêu cực → Gửi khiếu nại trên hệ thống → Chờ xem xét</td></tr>
+<tr><td>Khách hối đi nhanh</td><td>"Em sẽ cố gắng nhanh nhất trong mức an toàn cho phép ạ"</td></tr>
+<tr><td>Khách khó tính, la mắng</td><td>Bình tĩnh lắng nghe → Không cãi → Xin lỗi nếu có thiếu sót → Gọi hỗ trợ nếu cần</td></tr>
+<tr><td>Khách muốn thay đổi điểm đến</td><td>Kiểm tra trên App → Cập nhật nếu hệ thống cho phép → Không tự ý thỏa thuận ngoài App</td></tr>
+<tr><td>Khách không trả tiền/chuyến</td><td>Không dùng vũ lực → Báo hỗ trợ ngay → Để bộ phận giải quyết</td></tr>
+<tr><td>Đơn Food khách không nhận</td><td>Liên hệ nhiều lần → Ghi nhận trên App → Báo hỗ trợ → Không ăn/giữ hàng</td></tr>
+<tr><td>Hàng hóa có dấu hiệu bất thường</td><td>Từ chối nhận → Giải thích → Báo hỗ trợ ngay</td></tr>
+<tr><td>App treo/không cập nhật trạng thái</td><td>Không tắt đột ngột → Chờ tải lại → Báo hỗ trợ nếu không khỏi → Gọi tổng đài nếu không thoát ra được</td></tr>
+<tr><td>Khách đi cùng người khác</td><td>Đảm bảo đủ mũ bảo hiểm → Không nhận nếu quá tải quy định</td></tr>
+<tr><td>Đường tắc quá lâu</td><td>Báo khách trước → Giải thích nguyên nhân → Không tự đổi đường không thông báo</td></tr>
+</table>
 
-        <h2>VII. CHÍNH SÁCH DOANH THU & TRÁCH NHIỆM RIÊNG</h2>
-        
-        <h3>Thu nhập & Phí dịch vụ</h3>
-        <ul>
-            <li>✅ Bạn <span class="success">không trả tiền thuê xe</span> hàng tháng</li>
-            <li>✅ Trả <strong>phí dịch vụ nền tảng</strong> theo tỷ lệ quy định trên mỗi chuyến hoàn thành</li>
-            <li>✅ Chi phí sạc điện, bảo dưỡng, sửa chữa xe — <span class="highlight">do bạn tự chi trả</span></li>
-            <li>✅ Thu nhập = Tổng tiền khách trả − Phí nền tảng − Chi phí cá nhân</li>
-            <li>✅ Nhận tiền về tài khoản theo chu kỳ quy định trên hệ thống</li>
-        </ul>
+<h2 id="sec8">VIII. DOANH THU & TRÁCH NHIỆM</h2>
+<ul>
+<li>✅ Không trả thuê xe; chỉ trả phí dịch vụ nền tảng theo từng đơn</li>
+<li>✅ Chi phí sạc, bảo dưỡng, sửa chữa: <span class="highlight">tự chi trả</span></li>
+<li>✅ Thu nhập = Tổng thu − Phí nền tảng − Chi phí cá nhân</li>
+<li>✅ Tự mua bảo hiểm xe & bảo hiểm trách nhiệm dân sự</li>
+<li>✅ Duy trì điểm đánh giá cao để tiếp tục nhận đơn</li>
+</ul>
 
-        <h3>Trách nhiệm chính</h3>
-        <ul>
-            <li>Tuân thủ luật giao thông & quy chế công ty</li>
-            <li>Tự chịu trách nhiệm bảo quản, bảo dưỡng xe cá nhân</li>
-            <li>Mua đầy đủ bảo hiểm xe & bảo hiểm trách nhiệm dân sự</li>
-            <li>Duy trì tình trạng xe luôn đạt tiêu chuẩn hoạt động</li>
-            <li>Giữ điểm đánh giá cao từ khách hàng để tiếp tục được kết nối</li>
-        </ul>
+<h2 id="sec9">IX. HỖ TRỢ KHẨN CẤP</h2>
+<div class="support-box">
+<strong>📞 Tổng đài hỗ trợ tài xế Bike Platform:</strong><br>
+Khi đang trong cuốc không thoát ra ngoài được, App treo/không thao tác được → gọi ngay:<br>
+<span class="phone-num">1900 xxx xxx</span>
+</div>
 
-        <h2>VIII. ĐIỀU CẦN NHỚ</h2>
-        <div class="important">
-            <p><strong>Điểm mạnh của Bike Platform là TỰ CHỦ — nhưng cũng đi kèm TRÁCH NHIỆM:</strong></p>
-            <ul>
-                <li>⭐ Tự chủ thời gian → chạy nhiều thì thu nhập nhiều</li>
-                <li>⭐ Không trả tiền thuê xe → giữ được phần thu nhập lớn hơn</li>
-                <li>⭐ Tự chăm sóc xe → xe tốt = chạy được lâu = thu nhập ổn định</li>
-                <li>⭐ Dịch vụ tốt → điểm cao → nhận nhiều đơn hơn</li>
-                <li>⭐ An toàn trên mọi chuyến → bình yên cho chính mình</li>
-            </ul>
-        </div>
-
-        <div class="footer">
-            <p>💚 Chúc bạn an toàn & thành công trên mọi nẻo đường!</p>
-            <p>Nếu có thắc mắc → Gọi tổng đài hỗ trợ Xanh SM hoặc đến điểm giao dịch gần nhất</p>
-        </div>
-    </div>
+<div class="footer">
+💚 Chúc bạn an toàn & thành công trên mọi nẻo đường!<br>
+Nếu có thắc mắc → Gọi tổng đài hoặc đến điểm giao dịch gần nhất.
+</div>
+</div>
 </body>
 </html>
