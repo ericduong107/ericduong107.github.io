@@ -22,3 +22,7 @@
 ## 📫 Contact Me
 - 🌐 [Portfolio Website](https://ericduong107.github.io)
 - 📧 Email: ericduong107@gmail.com
+
+## Others Page
+- [Khóa Học XanhSM](https://ericduong107.github.io/khoa-hoc-xanhsm/)
+- [LH Tech Landing Page](https://ericduong107.github.io/lhtech-landingpage/)
